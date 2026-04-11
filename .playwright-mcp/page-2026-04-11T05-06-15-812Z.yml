@@ -1,0 +1,622 @@
+- generic [ref=e1]:
+  - link "欢迎进入 Andrej Karpathy：大语言模型构建个人知识库的实践指南 - 知乎,盲人用户使用操作智能引导，请按快捷键Ctrl+Alt+R；阅读详细操作说明请按快捷键Ctrl+Alt+问号键。":
+    - /url: javascript:void(0)
+    - img [ref=e2] [cursor=pointer]
+  - generic [ref=e4]:
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - link "知乎" [ref=e8] [cursor=pointer]:
+          - /url: https://www.zhihu.com
+          - img [ref=e9]
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - navigation [ref=e15]:
+              - link "关注" [ref=e16] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2Ffollow
+                - generic [ref=e17]: 关注
+              - link "推荐" [ref=e18] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2F
+                - generic [ref=e19]: 推荐
+              - link "热榜" [ref=e20] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2Fhot
+                - generic [ref=e21]: 热榜
+              - link "专栏" [ref=e22] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2Fcolumn-square
+                - generic [ref=e23]: 专栏
+              - link "圈子 New" [ref=e24] [cursor=pointer]:
+                - /url: https://www.zhihu.com/signin?next=%2Fring-feeds
+                - generic [ref=e25]:
+                  - text: 圈子
+                  - generic [ref=e26]: New
+              - link "付费咨询" [ref=e28] [cursor=pointer]:
+                - /url: https://www.zhihu.com/consult
+                - generic [ref=e29]: 付费咨询
+              - link "知学堂" [ref=e30] [cursor=pointer]:
+                - /url: https://www.zhihu.com/education/learning
+                - generic [ref=e31]: 知学堂
+            - generic [ref=e32]:
+              - search [ref=e33]:
+                - generic [ref=e37]:
+                  - combobox "搜索" [ref=e38]
+                  - button "搜索" [ref=e39] [cursor=pointer]:
+                    - img [ref=e41]
+                - link "直答" [ref=e43] [cursor=pointer]:
+                  - /url: https://zhida.zhihu.com/
+                  - img [ref=e44]
+                  - text: 直答
+              - generic [ref=e47]:
+                - generic [ref=e49] [cursor=pointer]: 切换模式
+                - button "登录/注册" [ref=e51] [cursor=pointer]
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: Andrej Karpathy：大语言模型构建个人知识库的实践指南
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: 切换模式
+                            - generic:
+                              - button:
+                                - img
+    - main [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e57]:
+            - article [ref=e58]:
+              - generic [ref=e59]:
+                - heading "Andrej Karpathy：大语言模型构建个人知识库的实践指南" [level=1] [ref=e60]
+                - generic [ref=e63]:
+                  - link "军舰" [ref=e66] [cursor=pointer]:
+                    - /url: //www.zhihu.com/people/vwarship
+                    - img "军舰" [ref=e67]
+                  - generic [ref=e68]:
+                    - link "军舰" [ref=e72] [cursor=pointer]:
+                      - /url: //www.zhihu.com/people/vwarship
+                    - generic [ref=e75]: 人工智能时代的程序员
+                - generic [ref=e77] [cursor=pointer]:
+                  - generic [ref=e78]: 7 人赞同了该文章
+                  - img [ref=e79]
+              - generic [ref=e85]:
+                - figure [ref=e86]:
+                  - img [ref=e88]
+                - paragraph [ref=e89]:
+                  - text: 最近我发现一个非常实用的方法：利用
+                  - link "大语言模型" [ref=e91] [cursor=pointer]:
+                    - /url: https://zhida.zhihu.com/search?content_id=272551192&content_type=Article&match_order=1&q=%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NzYwNTY3NzQsInEiOiLlpKfor63oqIDmqKHlnosiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjoyNzI1NTExOTIsImNvbnRlbnRfdHlwZSI6IkFydGljbGUiLCJtYXRjaF9vcmRlciI6MSwiemRfdG9rZW4iOm51bGx9.e94MxGCn4YRLXOUJ873ZnTr68hTn1OVU8uHK_NB5tIA&zhida_source=entity
+                    - text: 大语言模型
+                    - img [ref=e92]
+                  - text: （LLM）为各类感兴趣的研究方向搭建个人知识库。这样一来，我近期消耗的模型令牌中，用于处理代码的占比大幅减少，更多被用于处理知识（以 Markdown 文件和图片形式存储）。最新的大语言模型在这方面表现十分出色。具体做法如下：
+                - heading "数据导入" [level=3] [ref=e94]
+                - paragraph [ref=e95]:
+                  - text: 我先将各类源文件（文章、论文、代码仓库、数据集、图片等）归档到
+                  - code [ref=e96]: raw/
+                  - text: 目录下，再通过大语言模型逐步“编译”生成一份知识库，这份知识库本质就是按目录结构组织的一系列
+                  - code [ref=e97]: .md
+                  - text: 文件。 知识库会包含
+                  - code [ref=e98]: raw/
+                  - text: 目录下所有数据的摘要、反向链接，还会将数据按概念分类、撰写对应词条并完成相互关联。 为把网页文章转为
+                  - code [ref=e99]: .md
+                  - text: 文件，我习惯使用
+                  - link "Obsidian" [ref=e101] [cursor=pointer]:
+                    - /url: https://zhida.zhihu.com/search?content_id=272551192&content_type=Article&match_order=1&q=Obsidian&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NzYwNTY3NzQsInEiOiJPYnNpZGlhbiIsInpoaWRhX3NvdXJjZSI6ImVudGl0eSIsImNvbnRlbnRfaWQiOjI3MjU1MTE5MiwiY29udGVudF90eXBlIjoiQXJ0aWNsZSIsIm1hdGNoX29yZGVyIjoxLCJ6ZF90b2tlbiI6bnVsbH0.Yl_pIqZGakJn2yPKGnYd_bA5o7aw0WL-H6-kQFNUXFQ&zhida_source=entity
+                    - text: Obsidian
+                    - img [ref=e102]
+                  - text: 网页剪藏插件，同时通过快捷键将相关图片批量下载到本地，方便大语言模型直接调用。
+                - heading "集成开发环境" [level=3] [ref=e104]
+                - paragraph [ref=e105]: 我把 Obsidian 当作前端 IDE，既能查看原始数据、编译后的知识库，也能查看衍生的可视化内容。 需要重点说明的是：整个知识库的内容撰写与维护均由大语言模型完成，我几乎不直接手动修改。我还试用过多款 Obsidian 插件，以其他形式渲染和查看数据（比如用 Marp 制作幻灯片）。
+                - heading "问答交互" [level=3] [ref=e106]
+                - paragraph [ref=e107]: 真正有意思的是，当知识库规模足够大时（比如我近期的研究知识库已有约 100 篇词条、40 万字），就可以向大语言模型智能体提出各类复杂问题，它会自主检索、梳理并给出答案。 我原本以为需要用上复杂的检索增强生成（RAG）技术，但在当前这种小规模场景下，大语言模型能自动维护索引文件和所有文档的精简摘要，轻松读取全部关键相关数据，效果已经很好。
+                - heading "结果输出" [level=3] [ref=e108]
+                - paragraph [ref=e109]: 我不满足于仅在文本或终端获取答案，更倾向于让模型直接生成 Markdown 文件、幻灯片（Marp 格式）或 Matplotlib 图表，所有内容都能在 Obsidian 中查看。 根据不同查询需求，还可以生成更多种可视化格式。通常我会把这些输出结果“归档”回知识库，进一步丰富内容，让后续的查询和探索持续为知识库积累价值。
+                - heading "内容校验" [level=3] [ref=e110]
+                - paragraph [ref=e111]: 我会让大语言模型对知识库进行“健康检查”，比如排查数据矛盾、通过联网搜索补全缺失信息、挖掘潜在关联以生成新词条候选等，逐步优化知识库、提升整体数据完整性。大语言模型还很擅长提出值得进一步探究的问题。
+                - heading "辅助工具" [level=3] [ref=e112]
+                - paragraph [ref=e113]: 我还自行开发了一些数据处理工具，比如快速编写了一个简易的知识库搜索引擎，既可以通过网页界面直接使用，也更常通过命令行接口（CLI）将其作为工具交给大语言模型，用于处理更复杂的查询。
+                - heading "后续探索" [level=3] [ref=e114]
+                - paragraph [ref=e115]: 随着知识库仓库不断扩容，自然而然会考虑结合合成数据生成与模型微调，让大语言模型通过模型权重“真正记住”这些数据，而不只是依赖上下文窗口。
+                - heading "总结" [level=3] [ref=e116]
+                - paragraph [ref=e117]: 从多个来源收集原始数据，由大语言模型编译为 Markdown 格式知识库；再通过各类命令行工具驱动大语言模型完成问答，并逐步完善知识库，所有内容均可在 Obsidian 中查看。几乎无需手动编写或编辑知识库，全程由大语言模型主导维护。我认为这一方向完全有潜力诞生一款出色的新产品，而非目前这种零散脚本的组合方案。
+                - separator [ref=e118]
+                - heading "构建自己的知识系统（Gemini 3.1 Pro）" [level=3] [ref=e119]:
+                  - text: 构建自己的知识系统（
+                  - link "Gemini 3.1 Pro" [ref=e121] [cursor=pointer]:
+                    - /url: https://zhida.zhihu.com/search?content_id=272551192&content_type=Article&match_order=1&q=Gemini+3.1+Pro&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NzYwNTY3NzQsInEiOiJHZW1pbmkgMy4xIFBybyIsInpoaWRhX3NvdXJjZSI6ImVudGl0eSIsImNvbnRlbnRfaWQiOjI3MjU1MTE5MiwiY29udGVudF90eXBlIjoiQXJ0aWNsZSIsIm1hdGNoX29yZGVyIjoxLCJ6ZF90b2tlbiI6bnVsbH0.1rKAFB7PcT3oGOosMeN4R9bd9tGm5v7rvkYuMymkmo0&zhida_source=entity
+                    - text: Gemini 3.1 Pro
+                    - img [ref=e122]
+                  - text: ）
+                - paragraph [ref=e124]: 根据 Andrej Karpathy（前特斯拉 AI 总监、OpenAI 创始成员）在 2026 年 4 月分享的 “LLM Knowledge Bases”（大模型知识库） 概念，构建个人知识系统的方法论正在发生根本性的转变：放弃耗时的手动整理笔记，也暂时绕开复杂的 RAG（检索增强生成）系统；转而将 LLM 作为“全职图书管理员”，让它自动把海量原始资料“编译”成一个结构化的 Markdown Wiki。
+                - paragraph [ref=e125]: 基于他分享的工作流，以下是构建你自己 AI 驱动知识系统的核心逻辑与具体步骤：
+                - heading "1. 核心理念：从“手动记录”到“AI 编译”" [level=3] [ref=e126]
+                - list [ref=e127]:
+                  - listitem [ref=e128]: • 抛弃复杂架构，回归文件系统：在个人知识库规模（约 100 篇文章，40 万字左右）下，传统的向量数据库和 RAG 系统往往会引入“检索噪音”和不必要的复杂性。现代 LLM 已经足够聪明，完全可以直接阅读并维护索引文件和文档摘要。
+                  - listitem [ref=e129]: • Wiki 是 LLM 的领地：在这个系统中，人类主要负责收集高质量的“原始素材”，并把握大方向。知识库的目录结构、摘要提取、概念分类、双向链接等“脏活累活”，全部由 LLM 自动生成和维护。
+                - heading "2. 构建知识系统的三层架构" [level=3] [ref=e130]
+                - heading "第一步：Data Ingest（收集原始素材）" [level=3] [ref=e131]
+                - paragraph [ref=e132]:
+                  - text: 建立一个
+                  - code [ref=e133]: /raw
+                  - text: 文件夹，专门存放未经加工的原始资料。这些是知识库的“基石”，属于不可变的精选文档。
+                - list [ref=e134]:
+                  - listitem [ref=e135]: • 输入内容：研究论文、网页文章、GitHub 仓库代码、数据集以及相关的图表。
+                  - listitem [ref=e136]:
+                    - text: • 推荐工具：利用 Obsidian Web Clipper 等插件，将网页内容一键转换为干净的 Markdown（
+                    - code [ref=e137]: .md
+                    - text: ）文件。相关的图片也应下载到本地，以便 LLM 可以在后续利用其视觉能力（Vision）进行分析和引用。
+                - heading "第二步：LLM Compilation（LLM 自动编译）" [level=3] [ref=e138]
+                - paragraph [ref=e139]: 这是该架构的核心创新。LLM 不仅仅是为文件建立索引，而是像编译器一样，将零散的原始数据“编译”成相互关联的知识网络。
+                - list [ref=e140]:
+                  - listitem [ref=e141]:
+                    - text: • 生成全局索引与摘要：LLM 会自动阅读
+                    - code [ref=e142]: /raw
+                    - text: 中的文件，并编写
+                    - code [ref=e143]: index.md
+                    - text: （总目录）及每份文档的要点摘要。
+                  - listitem [ref=e144]: • 构建实体页面与链接：LLM 会提取出核心概念，生成百科式的“概念页面”，并在不同页面之间自动创建双向链接（Backlinks），形成网状结构。
+                - heading "第三步：Query & Filing Back（查询与知识沉淀）" [level=3] [ref=e145]
+                - paragraph [ref=e146]: 当知识库初具规模后，传统的“单次问答”将被“Agent 主导的探索”取代。
+                - list [ref=e147]:
+                  - listitem [ref=e148]: • 复杂推理：你可以向 LLM 提出需要深度综合的复杂问题，LLM 会在它自己搭建的 Wiki 中搜索、查阅关联链接并生成回答。
+                  - listitem [ref=e149]: • 知识回填（Filing Back）：最重要的一点是，LLM 的回答不仅是一次性的聊天气泡，它可以输出为新的 Markdown 文件、幻灯片（通过 Marp 插件）或数据可视化图表（通过 matplotlib），并将这些解答直接存回 Wiki 中。这意味着你提问得越多，知识库就越庞大、越聪明。
+                - heading "3. 知识库的日常维护：Linting（健康体检）" [level=3] [ref=e150]
+                - paragraph [ref=e151]: 像程序员维护代码一样，Karpathy 引入了对知识进行 Linting（代码检查）的机制：
+                - list [ref=e152]:
+                  - listitem [ref=e153]: • 定期让 LLM 扫描整个 Wiki，进行“体检”。
+                  - listitem [ref=e154]: • LLM 会自动发现知识库中相互矛盾的数据、过时的结论、孤立无链接的页面，以及缺失的逻辑环节。
+                  - listitem [ref=e155]: • 对于缺失的信息，LLM 可以主动调用网络搜索工具（Web Search）进行自动补全，并建议修改方案。
+                - heading "4. 推荐的基础工具栈" [level=3] [ref=e156]
+                - list [ref=e157]:
+                  - listitem [ref=e158]: • 知识库前端（IDE）：Obsidian。Karpathy 将 Obsidian 视作知识库的“集成开发环境”。它对 Markdown 的原生支持、丰富的插件生态以及双向链接视图，非常适合用来展示 LLM 生成的知识网络。
+                  - listitem [ref=e159]: • 数据格式：纯 Markdown。体积小巧、排版干净、没有平台锁定风险，且是 LLM 最容易理解和生成的格式。
+                  - listitem [ref=e160]: • 核心驱动：前沿大语言模型。使用具有长文本处理能力和代码能力的模型，通过 API 或脚本让它们在后台处理你的文件夹。
+                - paragraph [ref=e161]:
+                  - text: 总结行动指南： 要实践这一套理念，你可以从最简单的本地文件夹开始。专注于阅读和收集高质量的素材（存入
+                  - code [ref=e162]: /raw
+                  - text: ），然后通过编写简单的 Python 脚本调用大模型 API，让 AI 帮你生成摘要、建立目录和双向链接。把你过去花在排版、打标签和整理文件夹上的时间，全部用来思考和提出更深刻的问题。
+                - paragraph [ref=e163]
+                - separator [ref=e164]
+                - heading "构建自己的知识系统（Grok 4.20）" [level=3] [ref=e165]:
+                  - text: 构建自己的知识系统（
+                  - link "Grok 4.20" [ref=e167] [cursor=pointer]:
+                    - /url: https://zhida.zhihu.com/search?content_id=272551192&content_type=Article&match_order=1&q=Grok+4.20&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NzYwNTY3NzQsInEiOiJHcm9rIDQuMjAiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjoyNzI1NTExOTIsImNvbnRlbnRfdHlwZSI6IkFydGljbGUiLCJtYXRjaF9vcmRlciI6MSwiemRfdG9rZW4iOm51bGx9.Dg-nfhl63iat8YtnvRmKL_LhooEDtj69V7UuI6Pllyg&zhida_source=entity
+                    - text: Grok 4.20
+                    - img [ref=e168]
+                  - text: ）
+                - paragraph [ref=e170]: Karpathy 的这篇 X 帖子（2026 年 4 月 2 日）核心讲的是：用 LLM（大型语言模型）来构建和管理「个人知识库」（LLM Knowledge Bases），把零散的原始资料变成一个结构化、可查询、能自我进化的 Markdown Wiki。
+                - paragraph [ref=e171]: 他把知识工作从“手动记笔记”升级成“让 LLM 自动维护知识系统”，自己很少直接编辑文件，而是让 LLM 做编译、总结、链接、纠错和生成输出。最终目标是：知识会随着你的每次查询而自动积累、优化，形成一个“第二大脑”。
+                - heading "1. Karpathy 知识系统的核心流程（原帖 TLDR）" [level=3] [ref=e172]
+                - list [ref=e173]:
+                  - listitem [ref=e174]: • Data Ingest（数据摄入）
+                  - list [ref=e175]:
+                    - listitem [ref=e176]:
+                      - text: • 把文章、论文、代码仓库、数据集、图片等原始资料丢进
+                      - code [ref=e177]: raw/
+                      - text: 目录。
+                    - listitem [ref=e178]: • 用 Obsidian Web Clipper 快速把网页转成 Markdown，并用快捷键把相关图片下载到本地（方便 LLM 引用）。
+                  - listitem [ref=e179]: • Compile（编译）
+                  - list [ref=e180]:
+                    - listitem [ref=e181]:
+                      - text: • 用 LLM 增量地把
+                      - code [ref=e182]: raw/
+                      - text: 里的内容“编译”成一个 Markdown Wiki（一堆
+                      - code [ref=e183]: .md
+                      - text: 文件 + 目录结构）。
+                    - listitem [ref=e184]: • LLM 会自动做：
+                    - list [ref=e185]:
+                      - listitem [ref=e186]: • 每篇文档的总结
+                      - listitem [ref=e187]: • 提取概念、写概念文章
+                      - listitem [ref=e188]: • 建立 backlinks（双向链接）
+                      - listitem [ref=e189]: • 维护索引文件
+                  - listitem [ref=e190]: • IDE / 前端
+                  - list [ref=e191]:
+                    - listitem [ref=e192]: • 用 Obsidian 查看（支持 graph view、可视化、插件如 Marp 做幻灯片）。
+                    - listitem [ref=e193]: • LLM 才是真正的主人——你几乎不手动改 wiki 文件。
+                  - listitem [ref=e194]: • Q&A（查询与对话）
+                  - list [ref=e195]:
+                    - listitem [ref=e196]: • 当 Wiki 足够大（他举例 ~100 篇文章、40 万字），直接问 LLM 复杂问题。
+                    - listitem [ref=e197]: • LLM 会自己去 wiki 里检索、阅读相关文件、做推理。
+                    - listitem [ref=e198]: • 小规模下不需要复杂 RAG，LLM 自己维护索引就够用。
+                  - listitem [ref=e199]: • Output（输出）
+                  - list [ref=e200]:
+                    - listitem [ref=e201]: • LLM 不只回答文字，还能生成 Markdown 文件、Marp 幻灯片、Matplotlib 图表等。
+                    - listitem [ref=e202]: • 把这些输出“归档”回 wiki，形成闭环（每次查询都在丰富知识库）。
+                  - listitem [ref=e203]: • Linting & Maintenance（健康检查与维护）
+                  - list [ref=e204]:
+                    - listitem [ref=e205]: • LLM 定期做“健康检查”：找矛盾、补缺失数据、发现新连接、建议新文章。
+                  - listitem [ref=e206]: • Extra Tools & 未来
+                  - list [ref=e207]:
+                    - listitem [ref=e208]: • 他自己 vibe code 了一个小搜索引擎，让 LLM 通过 CLI 调用。
+                    - listitem [ref=e209]: • 未来方向：生成合成数据 + 微调，让 LLM 把知识“刻”进权重里（而非只靠上下文）。
+                - paragraph [ref=e210]: 一句话总结：原始资料 → LLM 自动编译成 Markdown Wiki → LLM 在 Wiki 上做研究、生成、优化 → 全程在 Obsidian 里可视化。你几乎不用手动写笔记，知识系统自己“长大”。
+                - heading "2. 如何自己动手构建相同的知识系统（实用指南）" [level=3] [ref=e211]
+                - paragraph [ref=e212]: 以下是零基础也能快速上手的步骤（2026 年当前最成熟方案）：
+                - heading "步骤 1：搭建基础环境（10 分钟）" [level=3] [ref=e213]
+                - list [ref=e214]:
+                  - listitem [ref=e215]: • 下载 Obsidian（免费，本地 Markdown 编辑器）。
+                  - listitem [ref=e216]: • 新建一个 Vault（知识库文件夹），推荐结构：
+                - paragraph [ref=e217]:
+                  - text: MyKnowledgeBase/
+                  - text: ├── raw/ ← 原始资料（不要动）
+                  - text: ├── wiki/ ← LLM 编译后的结构化知识（核心）
+                  - text: ├── images/ ← 图片
+                  - text: ├── index.md ← 总索引（LLM 维护）
+                  - text: └── concepts/ ← 概念文章目录
+                - heading "步骤 2：选择 LLM 工具（推荐组合）" [level=3] [ref=e218]
+                - table [ref=e219]:
+                  - rowgroup [ref=e220]:
+                    - row "工具 用途 推荐理由" [ref=e221]:
+                      - columnheader "工具" [ref=e222]
+                      - columnheader "用途" [ref=e223]
+                      - columnheader "推荐理由" [ref=e224]
+                    - row "Claude / Cursor 主要编译 & 编辑 最擅长长上下文 + Markdown" [ref=e225]:
+                      - cell "Claude / Cursor" [ref=e226]:
+                        - link "Claude" [ref=e228] [cursor=pointer]:
+                          - /url: https://zhida.zhihu.com/search?content_id=272551192&content_type=Article&match_order=1&q=Claude&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NzYwNTY3NzQsInEiOiJDbGF1ZGUiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjoyNzI1NTExOTIsImNvbnRlbnRfdHlwZSI6IkFydGljbGUiLCJtYXRjaF9vcmRlciI6MSwiemRfdG9rZW4iOm51bGx9._TBZ306hwuZ0NGbu0Cyk1Aqbh7KeX9_06wQpTaBi7a0&zhida_source=entity
+                          - text: Claude
+                          - img [ref=e229]
+                        - text: /
+                        - link "Cursor" [ref=e232] [cursor=pointer]:
+                          - /url: https://zhida.zhihu.com/search?content_id=272551192&content_type=Article&match_order=1&q=Cursor&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NzYwNTY3NzQsInEiOiJDdXJzb3IiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjoyNzI1NTExOTIsImNvbnRlbnRfdHlwZSI6IkFydGljbGUiLCJtYXRjaF9vcmRlciI6MSwiemRfdG9rZW4iOm51bGx9.ee4NT2vLrdXvsc-k5KjKhodZI652uKDBqz6EV_vOOPk&zhida_source=entity
+                          - text: Cursor
+                          - img [ref=e233]
+                      - cell "主要编译 & 编辑" [ref=e235]
+                      - cell "最擅长长上下文 + Markdown" [ref=e236]
+                    - row "Grok（Projects） 日常查询 & 文件管理 项目文件夹支持持久文件" [ref=e237]:
+                      - cell "Grok（Projects）" [ref=e238]
+                      - cell "日常查询 & 文件管理" [ref=e239]
+                      - cell "项目文件夹支持持久文件" [ref=e240]
+                    - row "Obsidian 插件 终端 / AI 集成 如 Terminal + Claude Code" [ref=e241]:
+                      - cell "Obsidian 插件" [ref=e242]
+                      - cell "终端 / AI 集成" [ref=e243]
+                      - cell "如 Terminal + Claude Code" [ref=e244]
+                - heading "步骤 3：开始编译（核心 Prompt 模板）" [level=3] [ref=e245]
+                - paragraph [ref=e246]: 每次加新资料时，把下面 Prompt 发给 LLM（Claude/Cursor 最佳）：
+                - blockquote [ref=e247]:
+                  - text: “你现在是我的个人知识库管理员。我的 wiki 位于 ./wiki/ 目录，raw/ 里有新文档
+                  - code [ref=e248]: xxx.md
+                  - text: 。
+                  - text: 请按以下规则增量编译：
+                - list [ref=e249]:
+                  - listitem [ref=e250]: 读取 raw/xxx.md 并总结关键内容
+                  - listitem [ref=e251]: 提取 3-8 个核心概念，检查是否已有对应文章
+                  - listitem [ref=e252]: 更新或新建 concepts/ 下的文章，加入 backlinks
+                  - listitem [ref=e253]: 更新 index.md 和所有相关索引
+                  - listitem [ref=e254]:
+                    - text: 输出所有需要修改/新建的文件完整内容
+                    - text: 保持风格一致、链接准确。”
+                - paragraph [ref=e255]:
+                  - text: LLM 会直接输出多个
+                  - code [ref=e256]: .md
+                  - text: 文件，你复制进对应目录即可（或让 Cursor 直接写文件）。
+                - heading "步骤 4：日常使用闭环" [level=3] [ref=e257]
+                - list [ref=e258]:
+                  - listitem [ref=e259]: • 提问：直接把问题 + “参考 wiki/ 目录下所有内容” 扔给 LLM。
+                  - listitem [ref=e260]: • 输出归档：让 LLM 把答案生成 Markdown 或 Marp 幻灯片，再让它“归档到 wiki/”。
+                  - listitem [ref=e261]: • 定期维护：每周让 LLM 跑一次 linting： > “对整个 wiki 做健康检查：找矛盾、缺失、潜在新连接，并建议 3 个新文章主题。”
+                - heading "步骤 5：进阶技巧（很多人已经在用）" [level=3] [ref=e262]
+                - list [ref=e263]:
+                  - listitem [ref=e264]: • 自动捕获：用 Obsidian Web Clipper + 手机快捷键把日常阅读、聊天记录、PDF 自动扔进 raw/。
+                  - listitem [ref=e265]: • 搜索增强：vibe code 一个简单本地搜索（或用 Obsidian 自带 + 插件）。
+                  - listitem [ref=e266]: • 多主题隔离：不同研究方向建不同子文件夹，避免污染。
+                  - listitem [ref=e267]: • 语音/跑步模式（Lex Fridman 做法）：让 LLM 基于当前 wiki 生成一个临时 mini-knowledge-base，用语音模式边跑步边对话。
+                - heading "3. 常见坑 & 建议" [level=3] [ref=e268]
+                - list [ref=e269]:
+                  - listitem [ref=e270]: • 从小主题开始：先做一个 10 篇文章的小 wiki，熟悉流程，再扩大。
+                  - listitem [ref=e271]: • 防止污染：很多人建议“个人 vault（高信号）” 和 “agent vault（实验区）” 分开，只把高质量输出手动搬进来。
+                  - listitem [ref=e272]: • 工具链：Obsidian + Claude/Cursor 是目前最强组合，几乎零成本。
+                  - listitem [ref=e273]: • 产品化趋势：Karpathy 说“这里有空间做一个了不起的新产品”，目前大家都在用“脚本 + Obsidian”的 hacky 方式，但很快会有更丝滑的一键工具出现。
+                - paragraph [ref=e274]: 照着上面做，你就能在几天内拥有一个会自己生长、自己纠错、自己回答复杂问题的个人知识系统——这正是 Karpathy 最近把大量 token 从“写代码”转向“管理知识”的原因。
+              - button "编辑于 2026-04-06 16:47・日本" [ref=e275]
+              - generic [ref=e277]:
+                - link "Andrej Karpathy" [ref=e280] [cursor=pointer]:
+                  - /url: //www.zhihu.com/topic/26897886
+                  - generic [ref=e281]: Andrej Karpathy
+                - link "LLM（大型语言模型）" [ref=e284] [cursor=pointer]:
+                  - /url: //www.zhihu.com/topic/26797383
+                  - generic [ref=e285]: LLM（大型语言模型）
+                - link "知识库" [ref=e288] [cursor=pointer]:
+                  - /url: //www.zhihu.com/topic/19553061
+                  - generic [ref=e289]: 知识库
+              - link "图片 阿里云 ×OpenClaw 简单部署您的“AI”助理！ 轻松拥有全天的待命的员工！ 查看详情 用户头像 阿里云 的广告" [ref=e291] [cursor=pointer]:
+                - /url: https://click.aliyun.com/m/1000409721/?spu=biz%3D0%26ci%3D3667380%26si%3Dd7ffa9eb-c996-4266-a98a-f5ce91e060c9%26ts%3D1775883974%26zid%3D1629
+                - generic [ref=e292]:
+                  - img "图片" [ref=e294]
+                  - generic [ref=e295]:
+                    - generic [ref=e296]:
+                      - generic [ref=e297]: 阿里云 ×OpenClaw 简单部署您的“AI”助理！
+                      - generic [ref=e299]:
+                        - text: 轻松拥有全天的待命的员工！
+                        - generic [ref=e301]:
+                          - img [ref=e302]
+                          - generic [ref=e304]: 查看详情
+                    - generic [ref=e305]:
+                      - generic [ref=e306]:
+                        - img "用户头像" [ref=e308]
+                        - generic [ref=e309]:
+                          - generic [ref=e310]: 阿里云
+                          - generic [ref=e311]: 的广告
+                      - img [ref=e312]
+              - generic [ref=e317]:
+                - generic [ref=e318]:
+                  - button "赞同 7" [ref=e320] [cursor=pointer]:
+                    - img [ref=e322]
+                    - text: 赞同 7
+                  - button "反对" [ref=e324] [cursor=pointer]:
+                    - img [ref=e326]
+                - button "添加评论" [ref=e328] [cursor=pointer]:
+                  - img [ref=e330]
+                  - text: 添加评论
+                - button "收藏" [ref=e332] [cursor=pointer]:
+                  - img [ref=e334]
+                  - text: "22"
+                - button "喜欢" [ref=e336] [cursor=pointer]:
+                  - img [ref=e338]
+                  - text: "1"
+                - button "分享" [ref=e342] [cursor=pointer]:
+                  - img [ref=e344]
+                  - text: 分享
+                - button "申请转载" [ref=e346] [cursor=pointer]:
+                  - img [ref=e348]
+                  - text: 申请转载
+                - button [ref=e352] [cursor=pointer]:
+                  - img [ref=e354]
+                - button [ref=e360] [cursor=pointer]:
+                  - img [ref=e362]
+            - generic [ref=e366]:
+              - generic [ref=e368]:
+                - img [ref=e369]
+                - generic [ref=e375]:
+                  - generic:
+                    - generic: 未登录用户
+              - generic [ref=e383]:
+                - img [ref=e385]
+                - generic [ref=e473]: 还没有评论，发表第一个评论吧
+          - generic [ref=e474]:
+            - generic "边栏锚点"
+            - generic [ref=e475]:
+              - complementary "关于作者" [ref=e476]:
+                - generic [ref=e478]: 关于作者
+                - generic [ref=e480]:
+                  - link "军舰" [ref=e483] [cursor=pointer]:
+                    - /url: //www.zhihu.com/people/vwarship
+                    - img "军舰" [ref=e484]
+                  - generic [ref=e485]:
+                    - link "军舰" [ref=e488] [cursor=pointer]:
+                      - /url: //www.zhihu.com/people/vwarship
+                    - generic [ref=e490]: 人工智能时代的程序员
+                - generic [ref=e491]:
+                  - generic [ref=e493]:
+                    - link "回答 24" [ref=e494] [cursor=pointer]:
+                      - /url: //www.zhihu.com/people/vwarship/answers
+                      - generic [ref=e495]:
+                        - generic [ref=e496]: 回答
+                        - strong [ref=e497]: "24"
+                    - link "文章 178" [ref=e498] [cursor=pointer]:
+                      - /url: //www.zhihu.com/people/vwarship/posts
+                      - generic [ref=e499]:
+                        - generic [ref=e500]: 文章
+                        - strong [ref=e501]: "178"
+                    - link "关注者 395" [ref=e502] [cursor=pointer]:
+                      - /url: //www.zhihu.com/people/vwarship/followers
+                      - generic [ref=e503]:
+                        - generic [ref=e504]: 关注者
+                        - strong [ref=e505]: "395"
+                  - generic [ref=e506]:
+                    - button "关注他" [ref=e507] [cursor=pointer]:
+                      - img [ref=e509]
+                      - text: 关注他
+                    - button "发私信" [ref=e511] [cursor=pointer]:
+                      - img [ref=e513]
+                      - text: 发私信
+              - generic [ref=e515]:
+                - img
+                - generic [ref=e516]:
+                  - img [ref=e517]
+                  - generic [ref=e519]: 大家都在搜
+                  - button "换一换" [ref=e520] [cursor=pointer]:
+                    - img [ref=e521]
+                    - text: 换一换
+                - generic [ref=e523]:
+                  - generic [ref=e524] [cursor=pointer]:
+                    - link "伊朗局势 445 万" [ref=e526]:
+                      - /url: https://www.zhihu.com/search?q=%E4%BC%8A%E6%9C%97%E5%B1%80%E5%8A%BF&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                      - generic "伊朗局势" [ref=e527]
+                      - generic [ref=e528]: 445 万
+                    - generic [ref=e529]: 热
+                  - generic [ref=e530] [cursor=pointer]:
+                    - link "阿耳忒弥斯二号在太平洋海域成功溅落 415 万" [ref=e532]:
+                      - /url: https://www.zhihu.com/search?q=%E9%98%BF%E8%80%B3%E5%BF%92%E5%BC%A5%E6%96%AF%E4%BA%8C%E5%8F%B7%E5%9C%A8%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%B5%B7%E5%9F%9F%E6%88%90%E5%8A%9F%E6%BA%85%E8%90%BD&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                      - generic "阿耳忒弥斯二号在太平洋海域成功溅落" [ref=e533]
+                      - generic [ref=e534]: 415 万
+                    - generic [ref=e535]: 新
+                  - generic [ref=e536] [cursor=pointer]:
+                    - link "美伊谈判 400 万" [ref=e538]:
+                      - /url: https://www.zhihu.com/search?q=%E7%BE%8E%E4%BC%8A%E8%B0%88%E5%88%A4&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                      - generic "美伊谈判" [ref=e539]
+                      - generic [ref=e540]: 400 万
+                    - generic [ref=e541]: 新
+                  - generic [ref=e542] [cursor=pointer]:
+                    - link "全红婵网暴案群主被行拘 385 万" [ref=e544]:
+                      - /url: https://www.zhihu.com/search?q=%E5%85%A8%E7%BA%A2%E5%A9%B5%E7%BD%91%E6%9A%B4%E6%A1%88%E7%BE%A4%E4%B8%BB%E8%A2%AB%E8%A1%8C%E6%8B%98&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                      - generic "全红婵网暴案群主被行拘" [ref=e545]
+                      - generic [ref=e546]: 385 万
+                    - generic [ref=e547]: 热
+                  - link "浪姐 7 一公舞台 370 万" [ref=e550] [cursor=pointer]:
+                    - /url: https://www.zhihu.com/search?q=%E6%B5%AA%E5%A7%90+7+%E4%B8%80%E5%85%AC%E8%88%9E%E5%8F%B0&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                    - generic "浪姐 7 一公舞台" [ref=e551]
+                    - generic [ref=e552]: 370 万
+                  - generic [ref=e553] [cursor=pointer]:
+                    - link "网传全红婵遭遇集体霸凌 355 万" [ref=e555]:
+                      - /url: https://www.zhihu.com/search?q=%E7%BD%91%E4%BC%A0%E5%85%A8%E7%BA%A2%E5%A9%B5%E9%81%AD%E9%81%87%E9%9B%86%E4%BD%93%E9%9C%B8%E5%87%8C&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                      - generic "网传全红婵遭遇集体霸凌" [ref=e556]
+                      - generic [ref=e557]: 355 万
+                    - generic [ref=e558]: 热
+                  - link "甘孜景区民警免票不含辅警 327 万" [ref=e561] [cursor=pointer]:
+                    - /url: https://www.zhihu.com/search?q=%E7%94%98%E5%AD%9C%E6%99%AF%E5%8C%BA%E6%B0%91%E8%AD%A6%E5%85%8D%E7%A5%A8%E4%B8%8D%E5%90%AB%E8%BE%85%E8%AD%A6&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                    - generic "甘孜景区民警免票不含辅警" [ref=e562]
+                    - generic [ref=e563]: 327 万
+                  - link "全红婵遭网暴训练中心报警 299 万" [ref=e566] [cursor=pointer]:
+                    - /url: https://www.zhihu.com/search?q=%E5%85%A8%E7%BA%A2%E5%A9%B5%E9%81%AD%E7%BD%91%E6%9A%B4%E8%AE%AD%E7%BB%83%E4%B8%AD%E5%BF%83%E6%8A%A5%E8%AD%A6&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                    - generic "全红婵遭网暴训练中心报警" [ref=e567]
+                    - generic [ref=e568]: 299 万
+                  - link "西北大学通报贾浅浅论文涉嫌抄袭 277 万" [ref=e571] [cursor=pointer]:
+                    - /url: https://www.zhihu.com/search?q=%E8%A5%BF%E5%8C%97%E5%A4%A7%E5%AD%A6%E9%80%9A%E6%8A%A5%E8%B4%BE%E6%B5%85%E6%B5%85%E8%AE%BA%E6%96%87%E6%B6%89%E5%AB%8C%E6%8A%84%E8%A2%AD&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                    - generic "西北大学通报贾浅浅论文涉嫌抄袭" [ref=e572]
+                    - generic [ref=e573]: 277 万
+                  - link "郭帆称孩子们普遍反奋斗不想听鸡汤 262 万" [ref=e576] [cursor=pointer]:
+                    - /url: https://www.zhihu.com/search?q=%E9%83%AD%E5%B8%86%E7%A7%B0%E5%AD%A9%E5%AD%90%E4%BB%AC%E6%99%AE%E9%81%8D%E5%8F%8D%E5%A5%8B%E6%96%97%E4%B8%8D%E6%83%B3%E5%90%AC%E9%B8%A1%E6%B1%A4&search_source=Trending&utm_content=search_hot&utm_medium=organic&utm_source=zhihu&type=content
+                    - generic "郭帆称孩子们普遍反奋斗不想听鸡汤" [ref=e577]
+                    - generic [ref=e578]: 262 万
+        - complementary "推荐阅读" [ref=e580]:
+          - heading "推荐阅读" [level=3] [ref=e581]
+          - list [ref=e582]:
+            - link "大语言模型学习路线：从入门到实战 大语言模型学习路线：从入门到实战 模块一：Hugging Face平台入门 Transformers库（7%）：理解如何使用Transformers进行模型的加载和预测。 Datasets库（4%）：学习如何处理数据 Tokenizers… 睿智而神奇" [ref=e583] [cursor=pointer]:
+              - /url: https://zhuanlan.zhihu.com/p/688144169
+              - generic [ref=e584]:
+                - heading "大语言模型学习路线：从入门到实战" [level=1] [ref=e585]
+                - paragraph [ref=e586]: 大语言模型学习路线：从入门到实战 模块一：Hugging Face平台入门 Transformers库（7%）：理解如何使用Transformers进行模型的加载和预测。 Datasets库（4%）：学习如何处理数据 Tokenizers…
+                - generic [ref=e588]: 睿智而神奇
+            - link "大语言模型中的查询优化技术：从基础到前沿的全景解析 大语言模型中的查询优化技术：从基础到前沿的全景解析 北方的郎 发表于北方的郎" [ref=e589] [cursor=pointer]:
+              - /url: https://zhuanlan.zhihu.com/p/15596329418
+              - generic [ref=e590]:
+                - img "大语言模型中的查询优化技术：从基础到前沿的全景解析" [ref=e591]
+                - heading "大语言模型中的查询优化技术：从基础到前沿的全景解析" [level=1] [ref=e592]
+                - generic [ref=e593]:
+                  - generic [ref=e594]: 北方的郎
+                  - generic [ref=e595]: 发表于北方的郎
+            - link "使用大语言模型从零构建知识图谱（下） 使用大语言模型从零构建知识图谱（下） 智见AGI" [ref=e596] [cursor=pointer]:
+              - /url: https://zhuanlan.zhihu.com/p/1982046186287417222
+              - generic [ref=e597]:
+                - img "使用大语言模型从零构建知识图谱（下）" [ref=e598]
+                - heading "使用大语言模型从零构建知识图谱（下）" [level=1] [ref=e599]
+                - generic [ref=e601]: 智见AGI
+            - link "没有比这更全的了吧！主流大语言模型的技术超级汇总！ 没有比这更全的了吧！主流大语言模型的技术超级汇总！ 大模型开发... 发表于我的学习笔..." [ref=e602] [cursor=pointer]:
+              - /url: https://zhuanlan.zhihu.com/p/678969566
+              - generic [ref=e603]:
+                - img "没有比这更全的了吧！主流大语言模型的技术超级汇总！" [ref=e604]
+                - heading "没有比这更全的了吧！主流大语言模型的技术超级汇总！" [level=1] [ref=e605]
+                - generic [ref=e606]:
+                  - generic [ref=e607]: 大模型开发...
+                  - generic [ref=e608]: 发表于我的学习笔...
+            - button [ref=e609] [cursor=pointer]:
+              - img [ref=e610]
+    - complementary:
+      - button "回到顶部" [ref=e612] [cursor=pointer]:
+        - img [ref=e613]
+  - generic [ref=e617]:
+    - generic [ref=e621]:
+      - generic [ref=e622]:
+        - generic [ref=e623]:
+          - generic [ref=e624]:
+            - generic [ref=e625]: 打开知乎App
+            - generic [ref=e626]: 在「我的页」右上角打开扫一扫
+            - generic [ref=e631]: 其他扫码方式：微信
+          - generic [ref=e632]:
+            - button "下载知乎App" [ref=e634] [cursor=pointer]
+            - button "无障碍模式" [ref=e636] [cursor=pointer]
+        - generic [ref=e638]:
+          - generic [ref=e640]:
+            - generic [ref=e641]:
+              - generic [ref=e642]:
+                - button "验证码登录" [ref=e643] [cursor=pointer]
+                - button "密码登录" [ref=e644] [cursor=pointer]
+                - link "开通机构号" [ref=e645] [cursor=pointer]:
+                  - /url: /org/signup
+              - textbox [ref=e649]:
+                - /placeholder: 手机号
+              - generic [ref=e650]:
+                - textbox [ref=e653]:
+                  - /placeholder: 输入 6 位短信验证码
+                - button "获取短信验证码" [ref=e654] [cursor=pointer]
+              - generic [ref=e655]:
+                - button
+                - button "获取语音验证码" [ref=e656] [cursor=pointer]:
+                  - generic [ref=e657]: 获取语音验证码
+              - button "登录/注册" [ref=e658] [cursor=pointer]
+            - generic:
+              - log
+          - generic [ref=e661]: 其他方式登录
+          - generic [ref=e664]:
+            - button [ref=e665] [cursor=pointer]:
+              - img [ref=e666]
+            - button [ref=e668] [cursor=pointer]:
+              - img [ref=e669]
+            - button [ref=e671] [cursor=pointer]:
+              - img [ref=e672]
+          - generic [ref=e674]:
+            - text: 未注册手机验证后自动登录，注册即代表同意
+            - link "《知乎协议》" [ref=e675] [cursor=pointer]:
+              - /url: https://www.zhihu.com/term/zhihu-terms
+            - link "《隐私保护指引》" [ref=e676] [cursor=pointer]:
+              - /url: https://www.zhihu.com/term/privacy
+      - generic:
+        - paragraph: 扫码下载知乎 App
+        - button "关闭二维码":
+          - img
+          - text: 关闭二维码
+    - button "关闭" [ref=e677] [cursor=pointer]:
+      - img [ref=e678]
+  - generic [ref=e682]:
+    - generic [ref=e686]:
+      - generic [ref=e687]:
+        - generic [ref=e688]:
+          - generic [ref=e689]:
+            - generic [ref=e690]: 打开知乎App
+            - generic [ref=e691]: 在「我的页」右上角打开扫一扫
+            - generic [ref=e696]: 其他扫码方式：微信
+          - generic [ref=e697]:
+            - button "下载知乎App" [ref=e699] [cursor=pointer]
+            - button "无障碍模式" [ref=e701] [cursor=pointer]
+        - generic [ref=e703]:
+          - generic [ref=e705]:
+            - generic [ref=e706]:
+              - generic [ref=e707]:
+                - button "验证码登录" [ref=e708] [cursor=pointer]
+                - button "密码登录" [ref=e709] [cursor=pointer]
+                - link "开通机构号" [ref=e710] [cursor=pointer]:
+                  - /url: /org/signup
+              - generic [ref=e711]:
+                - combobox [ref=e714] [cursor=pointer]:
+                  - generic [ref=e715]: 中国 +86
+                  - img [ref=e716]
+                - textbox [ref=e721]:
+                  - /placeholder: 手机号
+              - generic [ref=e722]:
+                - textbox [ref=e725]:
+                  - /placeholder: 输入 6 位短信验证码
+                - button "获取短信验证码" [ref=e726] [cursor=pointer]
+              - generic [ref=e727]:
+                - button
+                - button "获取语音验证码" [ref=e728] [cursor=pointer]:
+                  - generic [ref=e729]: 获取语音验证码
+              - button "登录/注册" [ref=e730] [cursor=pointer]
+            - generic:
+              - log
+          - generic [ref=e733]: 其他方式登录
+          - generic [ref=e736]:
+            - button [ref=e737] [cursor=pointer]:
+              - img [ref=e738]
+            - button [ref=e740] [cursor=pointer]:
+              - img [ref=e741]
+            - button [ref=e743] [cursor=pointer]:
+              - img [ref=e744]
+          - generic [ref=e746]:
+            - text: 未注册手机验证后自动登录，注册即代表同意
+            - link "《知乎协议》" [ref=e747] [cursor=pointer]:
+              - /url: https://www.zhihu.com/term/zhihu-terms
+            - link "《隐私保护指引》" [ref=e748] [cursor=pointer]:
+              - /url: https://www.zhihu.com/term/privacy
+      - generic:
+        - paragraph: 扫码下载知乎 App
+        - button "关闭二维码":
+          - img
+          - text: 关闭二维码
+    - button "关闭" [ref=e749] [cursor=pointer]:
+      - img [ref=e750]
+  - generic [ref=e755] [cursor=pointer]:
+    - combobox [ref=e756]
+    - img [ref=e757]
