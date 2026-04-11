@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "mcp__plugin_playwright_playwright__browser_navigate",
-      "mcp__plugin_playwright_playwright__browser_run_code"
+      "mcp__plugin_playwright_playwright__browser_run_code",
+      "Bash(brew install:*)",
+      "Bash(ls /Volumes/ZT/OpenClaw-Box/workspace/Kbrain/projects/zgnb/raw/*.md)",
+      "Bash(tesseract --list-langs)",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3 -c ':*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }

@@ -1,8 +1,10 @@
 # tools/llm_client.py
 import os
+from dotenv import load_dotenv
 from openai import OpenAI
 from tools.config import LLM_MODEL, LLM_BASE_URL
 
+load_dotenv()
 _api_key = os.getenv("DEEPSEEK_API_KEY")
 _client = None
 

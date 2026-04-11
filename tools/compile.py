@@ -55,7 +55,7 @@ def build_prompt(new_files: list[Path], existing_index: str, existing_concepts: 
 
     system_prompt = """你是知识库管理员。请严格按照以下规则工作：
 
-1. 为每篇新增 raw 写 200 字内摘要。
+1. 为每篇新增 raw 写 200 字内摘要（以 YAML frontmatter 形式放在该视频概念页的 "## 来源视频摘要" 下）。
 2. 提取核心概念，检查 `concepts/` 是否已有词条：有则追加新信息并更新 backlinks；无则新建。
 3. 更新 `wiki/maps/` 中的相关主题地图（如战法体系、技术分析、交易心态、宏观分析等）。
 4. 更新 `index.md` 总索引。
@@ -72,6 +72,7 @@ def build_prompt(new_files: list[Path], existing_index: str, existing_concepts: 
 - 内部链接使用 Obsidian 语法 [[概念名]]，不加扩展名
 - `index.md` 中只放一级分类、链接和简短说明，不需要写详细定义
 - 不要在代码块外输出任何解释性文字
+- 绝对禁止输出 `raw/` 路径下的文件。你只允许修改 concepts/、wiki/maps/、index.md
 """
 
     user_prompt = f"""## 现有 index.md\n{existing_index}\n\n## 现有 concepts\n{concepts_list}\n\n## 新增原始素材（共 {len(new_files)} 篇）\n""" + "\n\n".join(new_contents)
@@ -83,18 +84,33 @@ def build_prompt(new_files: list[Path], existing_index: str, existing_concepts: 
 
 
 def parse_llm_output(text: str) -> dict[str, str]:
-    """解析 LLM 返回的文件块"""
+    """解析 LLM 返回的文件块，支持 ```markdown 代码块和直接内容两种格式"""
     files = {}
-    pattern = re.compile(r"### File:\s*(.+?)\n```markdown\n(.*?)\n```", re.DOTALL)
+    # 格式 A：带 ```markdown 代码块
+    pattern = re.compile(r"### File:\s*([^\n]+?)\n```markdown\n(.*?)\n```", re.DOTALL)
     for m in pattern.finditer(text):
         path = m.group(1).strip()
         content = m.group(2).strip()
         files[path] = content
+
+    if not files:
+        # 格式 B：直接块内容（DeepSeek 常用这种格式）
+        pattern = re.compile(r"### File:\s*([^\n]+?)\n(.*?)(?=\n### File:|$)", re.DOTALL)
+        for m in pattern.finditer(text):
+            path = m.group(1).strip()
+            content = m.group(2).strip()
+            files[path] = content
     return files
 
 
 def write_files(files: dict[str, str]):
     for rel_path, content in files.items():
+        if "\n" in rel_path or len(rel_path) > 200:
+            print(f"[compile] warning: invalid path skipped: {rel_path[:100]}")
+            continue
+        if rel_path.startswith("raw/"):
+            print(f"[compile] warning: refused to write immutable raw/ file: {rel_path}")
+            continue
         target = Path(__file__).parent.parent / rel_path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(content, encoding="utf-8")

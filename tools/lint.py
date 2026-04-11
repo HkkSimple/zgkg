@@ -12,7 +12,9 @@ from tools.config import (
 
 
 def extract_wiki_links(text: str) -> set[str]:
-    return set(re.findall(r"\[\[([^\]]+)\]\]", text))
+    raw = set(re.findall(r"\[\[([^\]]+)\]\]", text))
+    # handle pipe links: [[Target|Display]] -> Target
+    return {r.split("|")[0].strip() for r in raw}
 
 
 def find_orphan_raw() -> list[str]:
