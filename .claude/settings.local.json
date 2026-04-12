@@ -1,5 +1,6 @@
 {
   "permissions": {
+    "defaultMode": "bypassPermissions",
     "allow": [
       "mcp__plugin_playwright_playwright__browser_navigate",
       "mcp__plugin_playwright_playwright__browser_run_code",
@@ -9,7 +10,20 @@
       "Bash(python3 -m json.tool)",
       "Bash(python3 -c ':*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(pdftotext \"/Volumes/ZT/OpenClaw-Box/workspace/Kbrain/projects/z-ge-knowledge/0-reference/zge-pdf-source/1.1-投资高手的尽头是\"少妇\"：一套让散户穿越牛熊的\"永不套牢\"心法.pdf\" -)",
+      "Bash(grep '\\\\.pdf$')",
+      "Bash(grep '\\\\.md$')",
+      "Bash(printf '%s\\\\n' 3.5.4*.pdf 4.1*.pdf 4.2*.pdf 4.3*.pdf 4.4*.pdf)",
+      "Bash(ln -sf \"$\\(pwd\\)/3.5.4-B1如何用\"量比\"在开盘一分钟看透资金意图.pdf\" /tmp/pdf_3.5.4.pdf)",
+      "Bash(ln -sf \"$\\(pwd\\)/4.1-麒麟会操盘实录：除了沪深300，每一张K线背后都站着一位\"带头大哥\".pdf\" /tmp/pdf_4.1.pdf)",
+      "Bash(ln -sf \"$\\(pwd\\)/4.2逃顶的艺术：主力出货的五种\"绝杀\"图谱与人性博弈.pdf\" /tmp/pdf_4.2.pdf)",
+      "Bash(ln -sf \"$\\(pwd\\)/4.3-关键K线法则：在90%的\"垃圾时间\"里，寻找那根统治一切的权杖.pdf\" /tmp/pdf_4.3.pdf)",
+      "Bash(ln -sf \"$\\(pwd\\)/4.4-穿透K线的谎言：量价关系的终极真相与\"铁蝴蝶\"的江湖暗号.pdf\" /tmp/pdf_4.4.pdf)",
+      "Bash(wc -l \"/Volumes/ZT/OpenClaw-Box/workspace/Kbrain/projects/zgnb/raw/articles/\"3.5.4*.md \"/Volumes/ZT/OpenClaw-Box/workspace/Kbrain/projects/zgnb/raw/articles/\"3.5.5*.md \"/Volumes/ZT/OpenClaw-Box/workspace/Kbrain/projects/zgnb/raw/articles/\"4.1*.md \"/Volumes/ZT/OpenClaw-Box/workspace/Kbrain/projects/zgnb/raw/articles/\"4.2*.md \"/Volumes/ZT/OpenClaw-Box/workspace/Kbrain/projects/zgnb/raw/articles/\"4.3*.md \"/Volumes/ZT/OpenClaw-Box/workspace/Kbrain/projects/zgnb/raw/articles/\"4.4*.md)",
+      "Bash(tesseract --version)",
+      "WebFetch(domain:www.paddleocr.ai)",
+      "Bash(sed 's/\\\\.md$//')"
     ]
   }
 }

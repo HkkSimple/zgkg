@@ -1,0 +1,49 @@
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Pytest / test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code / worktrees
+.claude/
+
+# Generated health-check reports (regenerated on demand)
+wiki/health-check-*.md
+
+# Generated cache / logs
+*.log
+.compile-log.json.bak
+
+# Output artifacts (generated on demand)
+output/
+# If you want to keep certain generated images/slides, track them explicitly

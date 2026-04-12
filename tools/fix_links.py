@@ -27,8 +27,8 @@ def find_missing_concepts() -> set[str]:
     if INDEX_FILE.exists():
         for link in extract_wiki_links(INDEX_FILE.read_text(encoding="utf-8")):
             all_links.add(extract_target(link))
-    # 排除明显不是 concept 的（如 raw/ 路径）
-    return {l for l in all_links if not l.startswith("raw/") and l not in existing}
+    # 排除明显不是 concept 的（如 raw/ 路径、带 # 锚点的链接）
+    return {l for l in all_links if not l.startswith("raw/") and "#" not in l and l not in existing}
 
 
 def create_stubs():
