@@ -28,7 +28,7 @@ def list_raw_files() -> list[Path]:
     files = []
     for d in (RAW_VIDEOS_DIR, RAW_ARTICLES_DIR):
         if d.exists():
-            files.extend(d.glob("*.md"))
+            files.extend(d.rglob("*.md"))
     return sorted(files)
 
 

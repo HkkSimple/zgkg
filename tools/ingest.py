@@ -78,15 +78,17 @@ def ingest_videos(force: bool = False):
         print(f"[ingest] video -> {out_path}")
 
 
-def ingest_articles(force: bool = False):
-    RAW_ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
-    for pdf in SOURCE_PDF_DIR.glob("*.pdf"):
+def ingest_articles(force: bool = False, source_dir: Path = None, target_subdir: str = None):
+    out_dir = RAW_ARTICLES_DIR / target_subdir if target_subdir else RAW_ARTICLES_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
+    src_dir = source_dir if source_dir else SOURCE_PDF_DIR
+    for pdf in src_dir.glob("*.pdf"):
         content = extract_pdf_text(pdf)
         if not content:
             continue
 
         stem = sanitize_filename(pdf.stem)
-        out_path = RAW_ARTICLES_DIR / f"{stem}.md"
+        out_path = out_dir / f"{stem}.md"
         if out_path.exists() and not force:
             continue
 
@@ -101,16 +103,18 @@ def main():
     parser.add_argument("--articles", action="store_true", help="Import PDF articles")
     parser.add_argument("--all", action="store_true", help="Import everything")
     parser.add_argument("--force", action="store_true", help="Overwrite existing files")
+    parser.add_argument("--source", type=Path, default=None, help="Source directory for articles/videos")
+    parser.add_argument("--target-subdir", type=str, default=None, help="Target subdirectory under raw/articles or raw/videos")
     args = parser.parse_args()
 
     if args.all or (not args.videos and not args.articles):
         ingest_videos(force=args.force)
-        ingest_articles(force=args.force)
+        ingest_articles(force=args.force, source_dir=args.source, target_subdir=args.target_subdir)
     else:
         if args.videos:
             ingest_videos(force=args.force)
         if args.articles:
-            ingest_articles(force=args.force)
+            ingest_articles(force=args.force, source_dir=args.source, target_subdir=args.target_subdir)
 
 
 if __name__ == "__main__":
