@@ -20,7 +20,8 @@ _client = None
 # 思考模式（通过 extra_body 开启，可读取 reasoning_content）：
 # extra_body={"thinking": {"type": "enabled"}}
 
-DEFAULT_MODEL = "deepseek-v4-flash"
+# DEFAULT_MODEL = "deepseek-v4-flash"
+DEFAULT_MODEL = "deepseek-v4-pro"
 DEFAULT_REASONING_EFFORT = "high"
 
 
